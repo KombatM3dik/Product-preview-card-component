@@ -1,0 +1,187 @@
+:root {}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--clr-cream);
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-gray: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-fraunces-700: 'Fraunces', serif;
+    --ff-montserrat-500: 'Montserrat', sans-serif;
+    --ff-montserrat-700: 'Montserrat', sans-serif;
+
+
+
+    display: flex;
+    place-content: center;
+    align-items: center;
+
+}
+
+
+.card {
+
+    /* border: 2px solid green; */
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+    min-width: 342px;
+    display: grid;
+    max-width: 600px;
+
+
+}
+
+@media (min-width: 600px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+        border-radius: .5rem;
+    }
+}
+
+.image {
+    
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+@media (min-width: 600px) {
+    .image {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .image {
+        border-top-right-radius: .5rem;
+        border-top-left-radius: .5rem;
+    }
+}
+
+.cat {
+    font-size: .8rem;
+    color: var(--clr-dark-gray);
+    font-family: var(--ff-montserrat-500);
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    letter-spacing: .25rem;
+
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--clr-dark-blue);
+    font-family: var(--ff-fraunces-700);
+    line-height: 1;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.description {
+    font-size: .85rem;
+    color: var(--clr-dark-gray);
+    font-family: var(--ff-montserrat-500);
+    line-height: 1.5;
+    padding: 0 1.5rem;
+}
+
+.pricing {
+    display: grid;
+    padding: 1rem;
+
+}
+
+.prices {
+    display: inline-flex;
+}
+
+.saleprice {
+    font-size: 2rem;
+    color: var(--clr-dark-cyan);
+    font-family: var(--ff-fraunces-700);
+}
+
+
+.origprice {
+    font-size: .8rem;
+    color: var(--clr-dark-gray);
+    font-family: var(--ff-montserrat-700);
+    padding: 1rem;
+    text-decoration: line-through;
+}
+
+.addtocart {
+    margin-top: 23%;
+    margin-inline: auto;
+    display: flex;
+    border-radius: .3rem;
+    border: 0px;
+    background-color: var(--clr-dark-cyan);
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 3rem;
+
+    color: var(--clr-white);
+    font-family: var(--ff-montserrat-700);
+
+}
+
+.cart {
+    padding-right: .5rem;
+}
